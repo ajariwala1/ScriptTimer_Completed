@@ -2,8 +2,6 @@
 //  SceneDelegate.swift
 //  ScriptTimer_Completed
 //
-//  Created by Abhishek Jariwala on 1/15/23.
-//
 
 import UIKit
 

@@ -7,18 +7,123 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-    </scenes>
+<scene sceneID="tne-QT-ifu">
+    <objects>
+        <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScriptTimer" customModuleProvider="target" sceneMemberID="viewController">
+            <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IMI-C2-blU">
+                        <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TES-bh-sm3">
+                                <rect key="frame" x="146.66666666666666" y="0.0" width="100" height="189.66666666666666"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Jmf-gf-JiR">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="189.66666666666666"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="F8w-Ab-BiP"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9UY-RE-RLV">
+                                <rect key="frame" x="30" y="189.66666666666663" width="333" height="190"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="fGZ-B4-s96">
+                                        <rect key="frame" x="-2" y="80.000000000000028" width="170.66666666666666" height="31"/>
+                                        <connections>
+                                            <action selector="wordsSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="59b-fY-bbv"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 words per second" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTt-5A-wdR" userLabel="Words per second">
+                                        <rect key="frame" x="166.66666666666663" y="84.666666666666657" width="166.33333333333337" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4fe-qR-63d">
+                                <rect key="frame" x="30" y="379.66666666666669" width="333" height="189.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vu7-08-8yb">
+                                        <rect key="frame" x="0.0" y="84.666666666666686" width="166.66666666666666" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uaW-OK-K5t">
+                                        <rect key="frame" x="166.66666666666663" y="77.666666666666686" width="166.33333333333337" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZJW-3A-zms">
+                                <rect key="frame" x="30" y="569.33333333333337" width="333" height="189.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4qr-lb-KLQ">
+                                        <rect key="frame" x="0.33333333333334281" y="0.0" width="332.66666666666663" height="94.666666666666671"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojF-6X-jwP" userLabel="Start Timer">
+                                                <rect key="frame" x="0.0" y="30.333333333333261" width="166.33333333333334" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Start Timer"/>
+                                                <connections>
+                                                    <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ThV-c4-p0i"/>
+                                                </connections>
+                                            </button>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="I7c-6U-VY3">
+                                                <rect key="frame" x="166.33333333333331" y="45.333333333333258" width="166.33333333333331" height="4"/>
+                                            </progressView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzt-xh-eVa" userLabel="Error">
+                                        <rect key="frame" x="146" y="94.666666666666629" width="41.333333333333343" height="95"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9UY-RE-RLV" secondAttribute="trailing" constant="30" id="4KS-Fl-kxT"/>
+                            <constraint firstAttribute="trailing" secondItem="4fe-qR-63d" secondAttribute="trailing" constant="30" id="7vd-71-HsL"/>
+                            <constraint firstAttribute="trailing" secondItem="ZJW-3A-zms" secondAttribute="trailing" constant="30" id="BI7-uO-xRG"/>
+                            <constraint firstItem="9UY-RE-RLV" firstAttribute="leading" secondItem="IMI-C2-blU" secondAttribute="leading" constant="30" id="ENf-fQ-sEX"/>
+                            <constraint firstItem="4fe-qR-63d" firstAttribute="leading" secondItem="IMI-C2-blU" secondAttribute="leading" constant="30" id="IMG-PJ-vh4"/>
+                            <constraint firstItem="ZJW-3A-zms" firstAttribute="leading" secondItem="IMI-C2-blU" secondAttribute="leading" constant="30" id="zrF-De-drp"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="IMI-C2-blU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lru-IR-Vmx"/>
+                    <constraint firstItem="IMI-C2-blU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ObF-Rz-2fc"/>
+                    <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IMI-C2-blU" secondAttribute="trailing" id="XWm-Ck-BDY"/>
+                    <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IMI-C2-blU" secondAttribute="bottom" id="uvo-Up-WVz"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="messageLabel" destination="gzt-xh-eVa" id="cfH-6l-0FY"/>
+                <outlet property="progressView" destination="I7c-6U-VY3" id="RJP-18-iOu"/>
+                <outlet property="totalWords" destination="uaW-OK-K5t" id="GGQ-kc-RGW"/>
+                <outlet property="wordsLabel" destination="kTt-5A-wdR" id="YgF-u1-bWM"/>
+            </connections>
+        </viewController>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+    </objects>
+    <point key="canvasLocation" x="-51" y="4"/>
+</scene>
+</scenes>
+<resources>
+<image name="app_logo" width="181.33332824707031" height="178.66667175292969"/>
+<systemColor name="systemBackgroundColor">
+    <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</systemColor>
+</resources>
 </document>
